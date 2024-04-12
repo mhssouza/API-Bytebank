@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-04-12T15:10:51.564401" rpa="false" schemaversion="5">
+<suite id="s1" name="API Bytebank" source="C:\Users\v8\Documents\VS Code\V8TECH\API Bytebank">
+<suite id="s1-s1" name="TestCases" source="C:\Users\v8\Documents\VS Code\V8TECH\API Bytebank\TestCases">
+<suite id="s1-s1-s1" name="GET" source="C:\Users\v8\Documents\VS Code\V8TECH\API Bytebank\TestCases\GET.robot">
+<test id="s1-s1-s1-t1" name="Resgatar os dados de todos os usuários" line="6">
+<kw name="Pega os dados de todos os usuários" owner="keywords">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2024-04-12T15:10:53.761646" level="INFO">GET Request : url=http://localhost:3000/users 
+ path_url=/users 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-04-12T15:10:53.762676" level="INFO">GET Response : url=http://localhost:3000/users 
+ status=200, reason=OK 
+ headers={'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': '*', 'Access-Control-Allow-Headers': '*', 'Content-Type': 'text/html; charset=utf-8', 'Accept-Ranges': 'bytes', 'Content-Length': '727', 'ETag': 'W/"2d7-Jtiyd9asPp2uD8JS9tU7qcUI8V0"', 'Vary': 'Accept-Encoding', 'Date': 'Fri, 12 Apr 2024 18:10:53 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
+ body=&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;link rel="icon" href="/favicon-48.png" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+    &lt;meta name="theme-color" content="#000000" /&gt;
+    &lt;meta name="description" content="Aplicativo do Bytebank" /&gt;
+    &lt;link rel="preconnect" href="https://fonts.googleapis.com" /&gt;
+    &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /&gt;
+    &lt;link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;display=swap"
+      rel="stylesheet"
+    /&gt;
+    &lt;title&gt;Bytebank&lt;/title&gt;
+  &lt;script defer src="/static/js/bundle.js"&gt;&lt;/script&gt;&lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id="root"&gt;&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+ 
+ </msg>
+<arg>url=${HOST}/${USERS}</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2024-04-12T15:10:51.702747" elapsed="2.060898"/>
+</kw>
+<status status="PASS" start="2024-04-12T15:10:51.702747" elapsed="2.060898"/>
+</kw>
+<status status="PASS" start="2024-04-12T15:10:51.701746" elapsed="2.062939"/>
+</test>
+<status status="PASS" start="2024-04-12T15:10:51.596591" elapsed="2.172053"/>
+</suite>
+<status status="PASS" start="2024-04-12T15:10:51.592590" elapsed="2.178050"/>
+</suite>
+<status status="PASS" start="2024-04-12T15:10:51.568401" elapsed="2.204809"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="API Bytebank">API Bytebank</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TestCases">API Bytebank.TestCases</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="GET">API Bytebank.TestCases.GET</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
