@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-04-12T15:10:50.761493" rpa="false" schemaversion="5">
-<suite id="s1" name="GET" source="c:\Users\v8\Documents\VS Code\V8TECH\API Bytebank\TestCases\GET.robot">
-<test id="s1-t1" name="Resgatar os dados de todos os usuários" line="6">
-<kw name="Pega os dados de todos os usuários" owner="keywords">
-<kw name="GET" owner="RequestsLibrary">
-<msg time="2024-04-12T15:10:53.010898" level="INFO">GET Request : url=http://localhost:3000/users 
- path_url=/users 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
- body=None 
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-04-15T11:28:56.534696" rpa="false" schemaversion="5">
+<suite id="s1" name="PUT" source="c:\Users\v8\Documents\VS Code\V8TECH\API-Bytebank\TestCases\PUT.robot">
+<test id="s1-t1" name="Alterar o saldo de um usuário específico utilizando valores negativos" line="6">
+<kw name="Altera o saldo de um usuário por um valor negativo 922fedb3-b981-480f-bff3-86b7808a263f" owner="keywords_PUT" source_name="Altera o saldo de um usuário por um valor negativo ${ID}">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-04-15T11:28:56.911641" level="INFO">&amp;{headers} = { Content-type=application/json }</msg>
+<var>&amp;{headers}</var>
+<arg>Content-type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-04-15T11:28:56.910642" elapsed="0.010771"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-04-15T11:28:56.922428" level="INFO">&amp;{body} = { saldo=-90000 }</msg>
+<var>&amp;{body}</var>
+<arg>saldo=${novoSaldo}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-04-15T11:28:56.921413" elapsed="0.001015"/>
+</kw>
+<kw name="PUT" owner="RequestsLibrary">
+<msg time="2024-04-15T11:28:56.960240" level="INFO">PUT Request : url=http://localhost:8000/users/922fedb3-b981-480f-bff3-86b7808a263f/saldo 
+ path_url=/users/922fedb3-b981-480f-bff3-86b7808a263f/saldo 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-type': 'application/json', 'Content-Length': '19'} 
+ body=b'{"saldo": "-90000"}' 
  </msg>
-<msg time="2024-04-12T15:10:53.013911" level="INFO">GET Response : url=http://localhost:3000/users 
+<msg time="2024-04-15T11:28:56.961239" level="INFO">PUT Response : url=http://localhost:8000/users/922fedb3-b981-480f-bff3-86b7808a263f/saldo 
  status=200, reason=OK 
- headers={'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': '*', 'Access-Control-Allow-Headers': '*', 'Content-Type': 'text/html; charset=utf-8', 'Accept-Ranges': 'bytes', 'Content-Length': '727', 'ETag': 'W/"2d7-Jtiyd9asPp2uD8JS9tU7qcUI8V0"', 'Vary': 'Accept-Encoding', 'Date': 'Fri, 12 Apr 2024 18:10:53 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
- body=&lt;!DOCTYPE html&gt;
-&lt;html lang="pt-BR"&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8" /&gt;
-    &lt;link rel="icon" href="/favicon-48.png" /&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
-    &lt;meta name="theme-color" content="#000000" /&gt;
-    &lt;meta name="description" content="Aplicativo do Bytebank" /&gt;
-    &lt;link rel="preconnect" href="https://fonts.googleapis.com" /&gt;
-    &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /&gt;
-    &lt;link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;display=swap"
-      rel="stylesheet"
-    /&gt;
-    &lt;title&gt;Bytebank&lt;/title&gt;
-  &lt;script defer src="/static/js/bundle.js"&gt;&lt;/script&gt;&lt;/head&gt;
-  &lt;body&gt;
-    &lt;div id="root"&gt;&lt;/div&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
- 
+ headers={'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '260', 'ETag': 'W/"104-D609DC1LkLX09xO9r3RDpLtNF/Y"', 'Date': 'Mon, 15 Apr 2024 14:28:56 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
+ body={"id":"922fedb3-b981-480f-bff3-86b7808a263f","email":"matheus.santos@v8.tech","transacoes":[{"id":"02b5a90a-4cd1-41c4-9465-980527399c2b","tipoTransacao":"Depósito","valor":"-5845443","data":"14/04/2024","mes":"Abril"}],"saldo":-90000,"nome":"Jorginho Santos"} 
  </msg>
-<arg>url=${HOST}/${USERS}</arg>
-<doc>Sends a GET request.</doc>
-<status status="PASS" start="2024-04-12T15:10:50.936153" elapsed="2.078758"/>
+<msg time="2024-04-15T11:28:56.961239" level="FAIL">Url: http://localhost:8000/users/922fedb3-b981-480f-bff3-86b7808a263f/saldo Expected status: 200 != 401</msg>
+<arg>url=${HOST}/${USERS}/${ID}/${SALDO}</arg>
+<arg>headers=&amp;{headers}</arg>
+<arg>json=&amp;{body}</arg>
+<arg>expected_status=${STATUS}</arg>
+<doc>Sends a PUT request.</doc>
+<status status="FAIL" start="2024-04-15T11:28:56.923425" elapsed="0.048215">Url: http://localhost:8000/users/922fedb3-b981-480f-bff3-86b7808a263f/saldo Expected status: 200 != 401</status>
 </kw>
-<status status="PASS" start="2024-04-12T15:10:50.935150" elapsed="2.079761"/>
+<arg>-90000</arg>
+<arg>401</arg>
+<status status="FAIL" start="2024-04-15T11:28:56.909607" elapsed="0.062033">Url: http://localhost:8000/users/922fedb3-b981-480f-bff3-86b7808a263f/saldo Expected status: 200 != 401</status>
 </kw>
-<status status="PASS" start="2024-04-12T15:10:50.934143" elapsed="2.081767"/>
+<status status="FAIL" start="2024-04-15T11:28:56.908527" elapsed="0.071751">Url: http://localhost:8000/users/922fedb3-b981-480f-bff3-86b7808a263f/saldo Expected status: 200 != 401</status>
 </test>
-<status status="PASS" start="2024-04-12T15:10:50.769633" elapsed="2.247277"/>
+<status status="FAIL" start="2024-04-15T11:28:56.555420" elapsed="0.429379"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="GET">GET</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="PUT">PUT</stat>
 </suite>
 </statistics>
 <errors>
